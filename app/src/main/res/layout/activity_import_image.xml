@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border2"
+        android:fadingEdge="horizontal|vertical|none"
+        android:visibility="visible"
+
+        >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="100dp"
+    >
+    <TextView
+        android:id="@+id/colorValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:text="Hex: \n RGB:"
+        android:layout_marginTop="20px"
+
+        />
+        <TextView
+            android:id="@+id/colorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:text="Color name:"
+            android:layout_marginTop="50dp"
+
+            />
+</RelativeLayout>
+
+        <View
+            android:id="@+id/displayColor"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/pickedImage"
+        android:layout_width="match_parent"
+        android:layout_height="420sp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+
+    <Button
+        android:id="@+id/btn_importImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/teal_700"
+        android:fontFamily="sans-serif"
+        android:text="Import Image"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_700"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        />
+
+</RelativeLayout>

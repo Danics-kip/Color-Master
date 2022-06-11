@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/teal_700"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        />
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/opencv_tutorial_activity_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contextClickable="true" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dp"
+        android:fadingEdge="horizontal|vertical|none"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent"
+            >
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/view"
+                android:layout_margin="10dp"
+                android:background="@drawable/border1"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                >
+
+            <TextView
+                android:id="@+id/color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/touch_coordinates"
+                android:text="COLOR: "
+                android:textColor="#00FFFF"
+                android:textSize="30px"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgb_color"
+                android:layout_below="@+id/color"
+                android:textStyle="bold"
+                android:text="RGB:"
+                android:textColor="#00FFFF"
+                android:fontFamily="sans-serif"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hex_color"
+                android:layout_below="@+id/rgb_color"
+                android:text="HEX:"
+                android:textColor="#00FFFF"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                />
+
+            <TextView
+                android:id="@+id/touch_coordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: 0, Y: 0"
+                android:textColor="#00FFFF"
+                android:textSize="30px"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>
